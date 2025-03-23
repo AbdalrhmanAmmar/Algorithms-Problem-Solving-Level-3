@@ -34,11 +34,12 @@ void printarray(int array[3][3]) {
 
 
 int main() {
-	int array[3][3], arrayrow[3], arraycol[3];
+	int array[3][3], int array2[3][3];
 
 	readarray(array);
-	cout << "items arrayy" << endl;
+	cout << "items array one " << endl;
 	printarray(array);
+    
 
 
 
