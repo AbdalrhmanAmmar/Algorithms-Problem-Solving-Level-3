@@ -17,32 +17,19 @@ void readarray(int array[3][3]) {
 }
 
 void printarray(int array[3][3]) {
+	int sum = 0;
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 3; j++) {
 			cout << array[i][j] << " ";
+			sum += array[i][j];
 		}
 		cout << endl;
+	
 	}
+	cout << sum;
 	
 };
 
-
-void printarrayrow(int array[3][3] , int arrayrow[3]) {
-	
-		for (int j = 0; j < 3; j++) {
-			arrayrow[j] = array[1][j];
-			cout << arrayrow[j] << " ";
-		}
-	
-	cout << endl;
-}
-void printarraycol(int array[3][3], int arraycol[3]) {
-	for (int i = 0; i < 3; i++) {
-		
-			arraycol[i] = array[i][1];
-		cout << arraycol[i] << " ";
-	}
-}
 
 
 
@@ -53,10 +40,7 @@ int main() {
 	cout << "items arrayy" << endl;
 	printarray(array);
 
-	cout << "middle rwo item" << endl;
-	printarrayrow(array, arrayrow);
-	cout << "middle col item" << endl;
-	printarraycol(array, arraycol);
+
 
 
 }
