@@ -13,14 +13,17 @@ string Readstring(string msg) {
 
 void CountMyString(string name, int& smallcount, int& CapitalCount, int& Countlength) {
 	for (int i = 0; i < name.length(); i++) {
-		Countlength++;
-		if (name[i] == toupper(name[i])) {
-			CapitalCount++;
+		if (isalpha(name[i])) {
+			if (isupper(name[i])) {
+				CapitalCount++;
+			}
+			else if (islower(name[i])) {
+				smallcount++;
+			}
 		}
-		else {
-			smallcount++;
-		}
+
 	}
+	Countlength = smallcount + CapitalCount;
 }
 
 int main() {
